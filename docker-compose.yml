@@ -14,7 +14,7 @@ services:
       resources:
         limits:
           cpus: "0.3"
-          memory: "130MB"
+          memory: "150MB"
 
   rinha_api2_py:
     <<: *rinha_api1_py
@@ -44,7 +44,7 @@ services:
       resources:
         limits:
           cpus: '0.6'
-          memory: '250MB'
+          memory: '240MB'
 
   nginx:
     image: nginx:latest
@@ -60,4 +60,4 @@ services:
       resources:
         limits:
           cpus: "0.3"
-          memory: "40MB" 
+          memory: "10MB" 

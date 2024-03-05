@@ -32,6 +32,8 @@ class Cliente(BaseModel):
     def add_transacao(self, transacao: Transacao):
         if transacao.tipo == "c":
             self.saldo += transacao.valor
+            return
+            
         
         novo_saldo = self.saldo - transacao.valor
         if novo_saldo < self.limite *-1:

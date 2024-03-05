@@ -6,15 +6,13 @@ class Db:
     def __init__(self):
         self.pool = AsyncConnectionPool(
             conninfo='host=localhost port=5432 dbname=mydatabase user=myuser password=mypassword',
-            min_size=16,
-            max_size=32,
+            min_size=5,
+            max_size=75,
             open=False,
         )
     
     async def consulta_cliente(self, id_cliente: int) -> Cliente:
         query1 = "SELECT ID, ACCOUNT_LIMIT, BALANCE FROM CLIENTS WHERE ID = {};"
-
-        await self.pool.open()
 
         async with self.pool.connection() as conn:
             async with conn.cursor() as cursor:
@@ -32,8 +30,6 @@ class Db:
     async def consulta_extrato(self, id_cliente: int) -> Extrato:
         query1 = "SELECT ACCOUNT_LIMIT, BALANCE FROM CLIENTS WHERE ID = {} FOR UPDATE;"
         query2 = "SELECT VALUE, TYPE, DESCRIPTION, CREATED_AT FROM TRANSACTIONS WHERE CLIENT_ID = {} ORDER BY ID DESC LIMIT 10;"
-
-        await self.pool.open()
 
         async with self.pool.connection() as conn:
             async with conn.cursor() as cursor:
@@ -63,8 +59,6 @@ class Db:
         query1 = "SELECT ACCOUNT_LIMIT, BALANCE FROM CLIENTS WHERE ID = {} FOR UPDATE;"
         query2 = "UPDATE CLIENTS SET BALANCE = {} WHERE ID = {};"
         query3 = "INSERT INTO TRANSACTIONS (VALUE, TYPE, DESCRIPTION, CLIENT_ID) VALUES ({}, '{}', '{}', {})"
-
-        await self.pool.open()
 
         async with self.pool.connection() as conn:
             async with conn.cursor() as cursor:
