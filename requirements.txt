@@ -1,0 +1,5 @@
+psycopg-binary
+psycopg
+psycopg-pool
+pydantic
+sanic
