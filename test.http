@@ -1,12 +1,32 @@
+### Docker - Consulta Extrato
+GET  http://localhost:9999/clientes/2/extrato
+
+
+### Docker - Cadastro Transação
 POST http://localhost:9999/clientes/1/transacoes
 Content-Type: application/json
 
 {
     "valor": 1000,
-    "descricao": "sss",
-    "tipo": "c"
+    "descricao": "descricao",
+    "tipo": "d"
 }
 
 
-###
-GET  http://localhost:9999/clientes/1/extrato
+
+
+
+
+### Local - Consulta Extrato
+GET  http://localhost:8000/clientes/4/extrato
+
+
+### Local - Cadastro Transação
+POST http://localhost:8000/clientes/4/transacoes
+Content-Type: application/json
+
+{
+    "valor": 1,
+    "descricao": "tome",
+    "tipo": "d"
+}

@@ -3,3 +3,4 @@ psycopg
 psycopg-pool
 pydantic
 sanic
+redis
