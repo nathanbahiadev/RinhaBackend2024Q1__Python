@@ -8,7 +8,7 @@ app = Sanic(__name__)
 
 pool = AsyncConnectionPool(
     conninfo='host=localhost port=5432 dbname=mydatabase user=myuser password=mypassword',
-    min_size=5,
+    min_size=5, 
     open=False
 )    
 
@@ -47,6 +47,9 @@ async def transacoes(request, id_cliente: int):
                 if "CLIENT_NOT_FOUND" in str(exc):
                     return empty(status=404)
                 return empty(status=422)
+            
+    except ValueError:
+        return empty(status=422)
 
     except Exception as exc:
         print(exc)

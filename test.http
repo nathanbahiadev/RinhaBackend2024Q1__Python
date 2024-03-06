@@ -7,8 +7,8 @@ POST http://localhost:9999/clientes/1/transacoes
 Content-Type: application/json
 
 {
-    "valor": 1000,
-    "descricao": "descricao",
+    "valor": 1,
+    "descricao": "devdddolvddde",
     "tipo": "d"
 }
 
@@ -22,11 +22,11 @@ GET  http://localhost:8000/clientes/4/extrato
 
 
 ### Local - Cadastro Transação
-POST http://localhost:8000/clientes/4/transacoes
+POST http://localhost:8000/clientes/1/transacoes
 Content-Type: application/json
 
 {
     "valor": 1,
-    "descricao": "tome",
+    "descricao": "devolve",
     "tipo": "d"
 }
