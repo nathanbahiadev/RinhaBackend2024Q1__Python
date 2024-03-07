@@ -7,12 +7,14 @@
 [Link do repositório](https://github.com/nathanbahiadev/RinhaBackend2024Q1__Python)
 
 API desenvolvida utlizando:
-- [Python](https://python.org/) - Linguagem de programação
-- [Sanic](https://sanic.dev/en/) - Web Framework
-- [Postgres](https://www.postgresql.org/docs/) - Banco de Dados
-- [Nginx](https://nginx.org/en/docs/) - Load Balancer
+- Python - https://python.org/
+- Sanic - https://sanic.dev/en/
+- Postgres - https://www.postgresql.org/docs/
+- Nginx - https://nginx.org/en/docs/
 
 
 Minhas redes sociais:
-- [Github](https://github.com/nathanbahiadev)
-- [LinkedIn](https://linkedin.com/in/nathanbahia)
+- Github - https://github.com/nathanbahiadev
+- LinkedIn - https://linkedin.com/in/nathanbahia
+
+<img src="gatling.png" /> 
